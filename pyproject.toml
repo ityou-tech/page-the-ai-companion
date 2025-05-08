@@ -1,0 +1,57 @@
+[project]
+name = "ai-companion"
+version = "0.1.0"
+description = "A personal AI companion chatbot with memory and reminder capabilities"
+readme = "README.md"
+requires-python = ">=3.13"
+license = {text = "MIT"}
+authors = [
+    {name = "AI Companion Developer"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Topic :: Communications :: Chat",
+]
+dependencies = [
+    "faiss-cpu>=1.11.0",
+    "langchain>=0.3.25",
+    "langchain-community>=0.3.23",
+    "langchain-core>=0.3.0",
+    "langchain-ollama>=0.3.2",
+    "llama-cpp-python>=0.3.9",
+    "pathlib",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+]
+
+[project.scripts]
+ai-companion = "src.ai_companion.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+required-version = ">=0.1.0"
+
+[tool.hatch.build]
+packages = ["src"]
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
