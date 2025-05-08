@@ -135,9 +135,8 @@ uv run pytest
 ### Common Issues
 
 If you encounter build errors, make sure:
-1. You have uv v0.1.0 or higher installed
-2. The Ollama service is running before starting the chat
-3. You've pulled the needed model (like MythoMax-L2) with Ollama
+1. The Ollama service is running before starting the chat
+2. You've pulled the needed model (like MythoMax-L2) with Ollama
 
 ### Model Alternatives
 
